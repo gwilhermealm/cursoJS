@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cadastro de nascionalidade</title>
+</head>
+<body>
+    <h1>verificaçao de nascionalidade </h1>
+    <p>qual seu país de origem?</p>
+    <input type="text" id="pais">
+    <input type="button" value="verificar" id="button" onclick="verificar()">
+    <div id="res">
+
+    </div>
+
+
+
+    <script>
+        function verificar(){
+             var p = 'brasil'
+             var pais =document.querySelector('input#pais')
+             var r =String(pais.value)
+             var res =document.querySelector('div#res')
+            if( r.toLocaleUpperCase()==p.toLocaleUpperCase()){
+
+             res.innerHTML= `<p> Você é brasileiro</p>`
+        
+            }    
+            else{
+            res.innerHTML=`<p> Você é estrangeiro</p>`
+            }
+    }
+    </script>
+</body>
+</html>

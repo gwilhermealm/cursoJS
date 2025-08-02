@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>evento DOM</title>
+    <style>
+        #area{
+            background-color: blueviolet;
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+        .cadastro{
+            background-color: blueviolet;
+            width: 50vw;
+            height: 50vh;
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 25px;
+            font-family: Arial, Helvetica, sans-serif
+        }
+        #cadastro{
+            background-color:transparent;
+        }
+    </style>
+</head>
+<body>
+    <div id="area" >
+        interaja...
+
+    </div>
+    <div class="cadastro">
+        <h2> Area de cadastro</h2>
+        <p>seu nome</p>
+        <input type="nome" id="nome">
+        <p>sobrenome</p>
+        <input type="sobrenome" id="sobrenome">
+        <p>data de nascimento</p>
+        <input type="date" name="nascimento" id="">
+        <button id="cadastro"> cadastrar</button>
+        <div id="usuario">...</div>
+    </div>
+    <script>
+        
+      
+       var botao = window.document.getElementById('cadastro')
+       botao.addEventListener ('click',clicar)
+       var area = window.document.getElementById('area')
+       area.addEventListener ('click',clicar)
+       area.addEventListener ('mouseenter',entrar)
+       area.addEventListener('mouseout',sair)
+
+       function clicar(){
+          
+           area.innerText ='clicou!'
+           area.style.background= 'red'
+       }
+       function  entrar(){
+        area.innerText= 'entrou'
+
+       }
+       function sair(){
+        area.innerText ='saiu!'
+        area.style.background= 'blueviolet'
+
+       }
+       function clicar(){
+        botao.innerText = 'cadastrado!'
+        botao.style.background='green'
+        
+       }
+       
+         
+    </script>
+</body>
+</html>

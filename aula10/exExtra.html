@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>evento DOM</title>
+    <style>
+        
+        .cadastro{
+            border: solid blueviolet;
+            border-radius: 10px;
+            box-shadow:0px 1px 10px rgba(0, 0, 0, 0.541);
+            background-color:white;
+            width: 50vw;
+            height: 50vh;
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 25px;
+            font-family: Arial, Helvetica, sans-serif
+        }
+        #cadastro{
+            background-color:transparent;
+            border: solid blueviolet;
+            border-radius: 5px;
+        }
+        input{
+            border:solid 1pt blueviolet;
+        }
+    </style>
+</head>
+<body>
+ 
+    <div class="cadastro">
+        <h2> Area de cadastro</h2>
+        <p>seu nome</p>
+        <input type="nome" id="nome">
+        <p>sobrenome</p>
+        <input type="sobrenome" id="sobrenome">
+        <p>data de nascimento</p>
+        <input type="date" name="nascimento" id="">
+        <button id="cadastro" onclick="cadastrar()"> cadastrar</button>
+        <div id="usuario"></div>
+    </div>
+    <script>
+        function cadastrar(){
+            var usuario=document.querySelector('div#usuario')
+            var nome=document.querySelector('input#nome')
+            var n= String(nome.value)
+            var sobrenome= document.querySelector('input#sobrenome')
+            var s= String(sobrenome.value)
+            usuario.innerHTML= `seja bem vindo ${n} ${s}`
+        }
+      
+    
+       
+       
+         
+    </script>
+</body>
+</html>
